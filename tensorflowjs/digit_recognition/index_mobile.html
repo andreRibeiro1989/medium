@@ -1,0 +1,72 @@
+<html>
+
+  <head>
+
+    <!-- bootstrap style -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- then Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- then Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+    <!-- Import TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.7.0"> </script>
+
+    <!-- Import tfjs-vis -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>
+
+    <style>
+      .padding-0l{
+        padding-left:0;
+      }
+      .padding-0r{
+        padding-right:0;
+      }
+      h1 {
+        font-size: 10vw; 
+      }
+    </style>
+
+  </head>
+
+  <body>
+  
+</html>
+
+  <div id="container" class="container" style="margin-top:25%; width:100%; height:100%">
+
+    <div class="row" style="text-align: center">
+      <div class="col-sm">
+        <h1>Draw a number</h1>
+        <br><br>
+        <p id="result" class="h1">Prediction: </p>
+        <br><br>
+      </div>
+    </div>
+
+    <div id="row" class="row" style="text-align: center">
+      <div id="col" class="col-lg">
+        <canvas id="canvas" class="canvas" style="border:10px solid #b9bfc9;"></canvas>
+      </div>
+    </div>
+    
+    <div class="row" style="text-align: center">
+      <div class="col-md padding-0r">
+        <button type="button" class="btn btn-primary btn-block" onclick="predictModel()">Predict Tensorflow</button>
+      </div>
+      <div class="col-md padding-0l">
+        <button type="button" class="btn btn-secondary btn-block" onclick="erase()">Clear</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Import the main script file -->
+  <script src="script_mobile.js"></script>
+
+</body>
