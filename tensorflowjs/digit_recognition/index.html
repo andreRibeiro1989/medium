@@ -1,0 +1,39 @@
+<html>
+  
+  <head>
+    
+    <!-- Imports TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.7.0"> </script>
+
+    <!-- Imports tfjs-vis -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>
+    
+  </head>
+  
+  <body>
+    
+    <!-- Defines the container with the predictand erase buttons, and the canvas to draw a digit -->
+    <div id="container">
+      
+      <h1>Draw a number</h1>
+      <p id="result">Prediction </p>
+      
+      <div>
+        <!-- This button tells the model to return a prediction for the current canvas -->
+        <button type="button" class="btn btn-primary btn-block" onclick="predictModel()">Predict</button>
+        
+        <!-- This button clears the canvas so that we can draw a new digit -->
+        <button type="button" class="btn btn-secondary btn-block" onclick="erase()">Clear</button>
+      </div>
+      
+      <!-- This defines the canvas on which we can draw a digit. 
+           If the canvas is too small increase the width and height -->
+      <canvas id="canvas" width="386px" height="386px" class="canvas" style="border:1px solid #b9bfc9;margin-top:25px;"></canvas>
+    </div>
+
+    <!-- Imports the main script file -->
+    <script src="script.js"></script>
+    
+  </body>
+  
+</html>
