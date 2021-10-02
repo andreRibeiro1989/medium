@@ -1,0 +1,48 @@
+service: language-corrector
+
+provider:
+  name: aws
+  stage: dev
+  region: eu-west-1
+  runtime: python:3.8
+  ecr:
+    images:
+      gingerit:
+        path: ./
+  apiGateway:
+    apiKeys:
+      - free:
+          - medium-language-corrector-free
+      - paid:
+          - medium-language-corrector-paid
+    usagePlan:
+      - free:
+          quota:
+            limit: 100
+            offset: 1
+            period: MONTH
+          throttle:
+            burstLimit: 1
+            rateLimit: 1
+      - paid:
+          quota:
+            limit: 1000
+            offset: 1
+            period: MONTH
+          throttle:
+            burstLimit: 200
+            rateLimit: 100
+
+functions:
+  gingerit:
+    timeout: 10
+    memorySize: 256
+    image:
+      name: gingerit
+    events:
+      - http:
+          path: language_corrector
+          method: post
+          cors: false
+          async: false
+          private: true
