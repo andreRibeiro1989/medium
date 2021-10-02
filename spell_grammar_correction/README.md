@@ -1,4 +1,4 @@
-# Serverless spelling and grammar correction service with AWS Lambda
+# Serverless spelling and grammar correction service
 
 ## What is this?
 
