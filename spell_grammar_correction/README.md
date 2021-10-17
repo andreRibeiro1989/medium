@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is the auxiliary code to my medium article X that explains how to build a serverless API with Amazon Lambda and API Gateway.
+This is the auxiliary code to my medium article [Build a serverless API with Amazon Lambda and API Gateway](https://towardsdatascience.com/build-a-serverless-api-with-amazon-lambda-and-api-gateway-dfd688510436) that explains how to build a serverless API with Amazon Lambda and API Gateway.
 
 ## What is included here?
 
