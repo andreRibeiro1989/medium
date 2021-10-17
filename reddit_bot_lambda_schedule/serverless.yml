@@ -1,0 +1,42 @@
+service: redditbot
+
+provider:
+  name: aws
+  stage: dev
+  region: eu-west-1
+  runtime: python:3.8
+  environment:
+    CLIENTID: 'BOT_CLIENT_ID'
+    CLIENTSECRET: 'BOT_CLIENT_SECRET'
+    USERAGENT: 'YOUR_USER_AGENT'
+    USERNAME: 'YOUR_USER_ACCOUNT_NAME'
+    PASSWORD: 'YOUR_USER_ACCOUNT_PASSWORD'
+    S3BUCKET: 'S3BUCKET'
+    S3PREFIX: 'S3PREFIX'
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+       - "s3:ListBucket"
+      Resource: "arn:aws:s3:::S3BUCKET"
+    - Effect: "Allow"
+      Action:
+       - "s3:GetObject"
+       - "s3:PutObject"
+       - "s3:DeleteObject"
+      Resource: "arn:aws:s3:::S3BUCKET/S3PREFIX/*"
+
+  ecr:
+    images:
+      redditbot:
+        path: ./
+
+functions:
+  redditbot:
+    timeout: 10
+    memorySize: 128
+    image:
+      name: redditbot
+    events:
+      - schedule:
+          rate: rate(1 minute)
+          enabled: true
