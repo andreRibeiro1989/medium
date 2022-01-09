@@ -1,9 +1,9 @@
 Question and Answering app using transformers, Docker and FastAPI.
 
-What is this?
+#### **What is this?**
 This is the auxiliary code to my medium article X that explains how to build a QA app using a pre-trained transformer model form HuggingFace, Docker and FastAPI.
 
-What is included here?
+#### **What is included here?**
 In here I included the 4 main files required to create the QA API.
 
 * `app/main.py`: Main API file and docker entrypoint. This defines the FastAPI logic.
@@ -11,7 +11,7 @@ In here I included the 4 main files required to create the QA API.
 * `download_model.sh`: Defines the model to be download and required steps.
 * `Dockerfile`: Defines the steps needed to install all required libraries, download the pre-trained model (`download_model.sh`) and run the FastAPI app (`/app`).
 
-How to run?
+#### **How to run?**
 1. Clone the repository to your local machine
 2. Build the docker container `docker build . -t qamodel`
 3. Run the container `docker run -p 8000:8000 qamodel`
