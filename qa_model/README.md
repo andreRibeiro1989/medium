@@ -6,10 +6,11 @@ This is the auxiliary code to my medium article X that explains how to build a Q
 #### **What is included here?**
 In here I included the 4 main files required to create the QA API.
 
-* `app/main.py`: Main API file and docker entrypoint. This defines the FastAPI logic.
+* `app/main.py`: Main app file and docker entrypoint. This defines the FastAPI logic.
 * `app/utils.py`: Utility file that defines the model's logic.
 * `download_model.sh`: Defines the model to be download and required steps.
 * `Dockerfile`: Defines the steps needed to install all required libraries, download the pre-trained model (`download_model.sh`) and run the FastAPI app (`/app`).
+* `test/test_app.ipynb`: Test the app `set_context` and `get_answer` endpoints.
 
 #### **How to run?**
 1. Clone the repository to your local machine
