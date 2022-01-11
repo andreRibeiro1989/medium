@@ -1,7 +1,8 @@
 Question and Answering app using transformers, Docker and FastAPI.
 
 #### **What is this?**
-This is the auxiliary code to my medium article X that explains how to build a QA app using a pre-trained transformer model form HuggingFace, Docker and FastAPI.
+This is the auxiliary code to my medium article "[Build a Q&A App with PyTorch](https://towardsdatascience.com/build-a-q-a-app-with-pytorch-cb599480e29)" that explains how to build a QA app using a pre-trained transformer model form HuggingFace, Docker and FastAPI.
+
 
 #### **What is included here?**
 In here I included the 4 main files required to create the QA API.
