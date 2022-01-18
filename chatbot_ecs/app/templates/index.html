@@ -1,0 +1,42 @@
+<!------
+This code is an adaptation of the original work of pablocorezzola 
+provided at https://bootsnipp.com/snippets/y8e4W
+under the MIT license
+
+Avatar icons were obtained from
+https://www.flaticon.com/free-icon/bot_1786548?term=bot%20avatar&page=1&position=1&page=1&position=1&related_id=1786548&origin=search
+
+<a href="https://www.flaticon.com/free-icons/bot" title="bot icons">Bot icons created by Freepik - Flaticon</a>
+---------->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+    </head>
+    <body>
+        <br>
+        <div class="col-sm-4 col-sm-offset-4 frame">
+            <ul>
+                {{ chat|safe }}
+            </ul>
+            <div>
+                <form class="col-sm-12" name="frm1" method="post" action="/">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="message" placeholder="Type a message">
+                        <span class="btn input-group-addon glyphicon glyphicon-share-alt" onclick="frm1.submit()"></span>
+                    </div>
+                </form>            
+            </div>
+        </div>   
+    </body>
+    <footer>
+        <a class="footer" href="https://www.flaticon.com/free-icons" title="icons">
+            Icons created by Freepik - Flaticon
+        </a>
+    </footer>
+<html>
