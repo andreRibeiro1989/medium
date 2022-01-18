@@ -28,11 +28,15 @@ class ChatBot:
     if self.chat_history_ids is not None:
       message_ids = torch.cat([self.chat_history_ids, message_ids], dim=-1)
 
-    # generated a response while limiting the total chat history to 1024 tokens, 
+    # generated a response by the bot 
     self.chat_history_ids = self.model.generate(
       message_ids,
+      pad_token_id=self.tokenizer.eos_token_id, 
+      do_sample=True, 
       max_length=1000, 
-      pad_token_id=self.tokenizer.eos_token_id
+      top_k=100, 
+      top_p=0.95,
+      temperature=0.8,
     )
     
     decoded_message = self.tokenizer.decode(
