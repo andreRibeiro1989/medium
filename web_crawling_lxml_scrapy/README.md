@@ -1,7 +1,7 @@
 Web crawling: from lxml to scrapy
 
 #### **What is this?**
-This is the auxiliary code to my medium article "Web crawling: from lxml to scrapy" that gives a quick introduction to crawling and scraping using Python.
+This is the auxiliary code to my medium article "[Web crawling: from lxml to scrapy](https://medium.com/dataisawesome/web-crawling-from-lxml-to-scrapy-1dde8e44062f)" that gives a quick introduction to crawling and scraping using Python.
 
 #### **What is included here?**
 In here I included both scrapers mentioned in the article.
